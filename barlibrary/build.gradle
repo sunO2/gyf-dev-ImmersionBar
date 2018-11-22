@@ -47,6 +47,9 @@ task makeJar(type: Copy) {
 
 makeJar.dependsOn(build)
 
+//上传到 bintray 命令
+//./gradlew clean build bintrayUpload -PbintrayUser=hezhihu -PbintrayKey=31f37a822bd2f85fbc14b740696b8fc089ad9055 -PdryRun=false
+
 publish {
     userOrg = 'hezhihu'
     groupId = 'com.sun02'
