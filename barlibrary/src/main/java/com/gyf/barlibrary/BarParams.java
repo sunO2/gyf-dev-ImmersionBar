@@ -169,6 +169,23 @@ public class BarParams implements Cloneable {
      */
     OnKeyboardListener onKeyboardListener;
 
+
+    /**
+     * 获取状态栏颜色
+     * @return 状态栏颜色
+     */
+    public int getStatusBarColor() {
+        return statusBarColor;
+    }
+
+    /**
+     * 获取状态栏文字颜色
+     * @return 文字颜色
+     */
+    public boolean isStatusBarDarkFont() {
+        return statusBarDarkFont;
+    }
+
     @Override
     protected BarParams clone() {
         BarParams barParams = null;
