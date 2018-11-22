@@ -48,10 +48,11 @@ task makeJar(type: Copy) {
 makeJar.dependsOn(build)
 
 publish {
-    userOrg = 'geyifeng'
-    groupId = 'com.gyf.immersionbar'
-    artifactId = 'immersionbar'
-    publishVersion = '2.3.3-beta02'
-    desc = 'Android bar management'
-    website = 'https://github.com/gyf-dev/ImmersionBar'
+    userOrg = 'hezhihu'
+    groupId = 'com.sun02'
+    repoName = 'MyMaven'
+    artifactId = 'ImmersionBar'
+    publishVersion = '2.3.3'
+    desc = '根据 gyf-dev 的 https://github.com/gyf-dev/ImmersionBar ImmersionBar 进行修改'
+    website = 'https://github.com/sunO2/gyf-dev-ImmersionBar'
 }
