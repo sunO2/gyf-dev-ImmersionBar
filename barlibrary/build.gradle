@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
+apply from: '../upload.gradle'
 
 android {
     compileSdkVersion 28
@@ -46,16 +47,3 @@ task makeJar(type: Copy) {
 }
 
 makeJar.dependsOn(build)
-
-//上传到 bintray 命令
-//./gradlew clean build bintrayUpload -PbintrayUser=hezhihu -PbintrayKey=31f37a822bd2f85fbc14b740696b8fc089ad9055 -PdryRun=false
-
-publish {
-    userOrg = 'hezhihu'
-    groupId = 'com.sun02'
-    repoName = 'MyMaven'
-    artifactId = 'ImmersionBar'
-    publishVersion = '2.3.3'
-    desc = '根据 gyf-dev 的 https://github.com/gyf-dev/ImmersionBar ImmersionBar 进行修改'
-    website = 'https://github.com/sunO2/gyf-dev-ImmersionBar'
-}
