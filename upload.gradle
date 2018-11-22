@@ -1,17 +1,32 @@
+
+//sdk.dir=/Users/hezhihu89/Android-dev/Android/SDK
+//bintray.user=hezhihu
+//bintray.apikey=31f37a822bd2f85fbc14b740696b8fc089ad9055
+//bintray.userOrg=hezhihu
+//bintray.groupId=com.sun02
+//bintray.repoName=MyMaven
+//bintray.artifactId=ImmersionBar-test
+//bintray.publishVersion=2.3.3
+//bintray.dryRun=false
+//bintray.desc=根据 gyf-dev 的 https://github.com/gyf-dev/ImmersionBar ImmersionBar 进行修改
+//bintray.website=https://github.com/sunO2/gyf-dev-ImmersionBar
+
+//apply plugin: 'com.novoda.bintray-release'
 //上传到 bintray 命令
 //./gradlew clean build bintrayUpload -PbintrayUser=hezhihu -PbintrayKey=31f37a822bd2f85fbc14b740696b8fc089ad9055 -PdryRun=false
+
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 publish {
-    userOrg = 'hezhihu'
-    groupId = 'com.sun02'
-    repoName = 'MyMaven'
-    artifactId = 'ImmersionBar-test'
-    publishVersion = '2.3.3'
-    dryRun = false
+    userOrg = properties.getProperty("bintray.userOrg")
+    groupId = properties.getProperty("bintray.groupId")
+    repoName = properties.getProperty("bintray.repoName")
+    artifactId = properties.getProperty("bintray.artifactId")
+    publishVersion = properties.getProperty("bintray.publishVersion")
+    dryRun = properties.getProperty("bintray.dryRun")
     bintrayUser = properties.getProperty("bintray.user")
     bintrayKey = properties.getProperty("bintray.apikey")
-    desc = '根据 gyf-dev 的 https://github.com/gyf-dev/ImmersionBar ImmersionBar 进行修改'
-    website = 'https://github.com/sunO2/gyf-dev-ImmersionBar'
+    desc = properties.getProperty("bintray.desc")
+    website = properties.getProperty("bintray.desc")
 }

@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
-apply from: '../upload.gradle'
+apply from: 'https://raw.githubusercontent.com/sunO2/gyf-dev-ImmersionBar/master/upload.gradle'
 
 android {
     compileSdkVersion 28
